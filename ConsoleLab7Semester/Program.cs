@@ -13,7 +13,7 @@ namespace ConsoleLab7Semester
         {
             while (true)
             {
-                Console.WriteLine("Введите номер лабораторной работы (1 - 8, 0 - для выхода из приложения)");
+                Console.WriteLine("Введите номер лабораторной работы (1 - 8, 10; 0 - для выхода из приложения)");
                 switch (Console.ReadLine())
                 {
                     case "0":
@@ -118,9 +118,16 @@ namespace ConsoleLab7Semester
                         }
                     case "8":
                         {
-                            Console.WriteLine("Лабораторная работа #7\n" +
+                            Console.WriteLine("Лабораторная работа #8\n" +
                                 "Даны действительные числа a, b. Получить u = min(a, b-a), y = min(ab, a+b), k = min(u + v2, 3.14)");
                             Lab8.RunTask1();
+                            break;
+                        }
+
+                    case "10":
+                        {
+                            Console.WriteLine("Лабораторная работа #10");
+                            Lab10.RunTask();
                             break;
                         }
                     default:
