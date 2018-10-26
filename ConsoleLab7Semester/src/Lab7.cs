@@ -27,14 +27,16 @@ namespace ConsoleLab7Semester.src
         public static void RunTask2()
         {
             var str = HelperClass.Input<string>("Строковая переменная: ");
-            var regex = new Regex(HelperClass.Input<string>("Подстрока: "));
-            Console.WriteLine(regex.Replace(str, ""));
+            string input = HelperClass.Input<string>("Подстрока: ");
+            var regex = new Regex(@"\b+" + input + @"\b+|^" + input + @"\b+|" + @"\b+" + input +@"$");
+            str = regex.Replace(str, " ");
+            Console.WriteLine(new Regex(@"\s\s+").Replace(str, " "));
             HelperClass.PressAnyKey();
         }
 
         public static void RunTask3()
         {
-           
+
         }
     }
 }
