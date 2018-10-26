@@ -28,7 +28,7 @@ namespace ConsoleLab7Semester.src
         {
             var str = HelperClass.Input<string>("Строковая переменная: ");
             string input = HelperClass.Input<string>("Подстрока: ");
-            var regex = new Regex(@"\b+" + input + @"\b+|^" + input + @"\b+|" + @"\b+" + input +@"$");
+            var regex = new Regex(@"\b" + input + @"\b|^" + input + @"\b|" + @"\b" + input +@"$");
             str = regex.Replace(str, " ");
             Console.WriteLine(new Regex(@"\s\s+").Replace(str, " "));
             HelperClass.PressAnyKey();
